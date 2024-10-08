@@ -133,7 +133,7 @@ ForEach ($subscription in $subscriptionsToClean) {
         ForEach ($mdfcPricingTier in $currentMdfcForSub) {
             Write-Output "Resetting $($mdfcPricingTier.Name) to Free MDFC Pricing Tier for Subscription: $($subscription.name)"
 
-            Set-AzSecurityPricing -Name $mdfcPricingTier.Name -PricingTier 'Free' | Out-Null
+            #Set-AzSecurityPricing -Name $mdfcPricingTier.Name -PricingTier 'Free' | Out-Null
         }
     }
 }
